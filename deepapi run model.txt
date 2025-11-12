@@ -1,0 +1,90 @@
+deep api working model 
+
+ollama serve
+
+ollama run deepseek-coder-v2:16b
+
+pip install -r requirements.txt
+
+python test_api.py
+
+
+project_root/
+├── app.py
+├── filters/
+│   ├── __init__.py
+│   ├── filters.py
+│   ├── loader.py
+│   └── keywords/
+│       └── all_keywords.txt
+├── ollama_client.py
+├── test_api.py  # (Optional: For Postman-like testing)
+├── requirements.txt
+
+
+
+ollama serve
+ollama pull qwen2.5vl:3b
+ollama pull deepseek-coder-v2:16b
+
+python app.py
+
+==to run==
+
+cd D:\Redis
+redis-server.exe
+redis-cli.exe
+
+
+{
+  "prompt": "Create a Python function to reverse a string",
+  "user_id": "muthu1"
+}
+GET: http://localhost:5051/history/muthu123
+DELETE: http://localhost:5051/history/muthu123
+
+Redis check----format
+
+"D:\Redis\redis-cli.exe"
+
+--shown this--
+127.0.0.1:6379>
+
+keys *
+--shown this--
+1) "chat:muthu1"
+2) "chat:user123"
+
+--to see history--
+LRANGE chat:muthu1 0 -1
+LRANGE chat:muthu2 0 -1
+
+SQL-run method
+
+POST http://127.0.0.1:8500/generate
+
+Body (JSON):
+{
+  "user_id": "user123",
+  "prompt": "Write a Python function to reverse a string"
+}
+
+----new format----
+
+{
+  "user_id": "1",
+  "task_name": "task_game_app",
+  "prompt": "Write code to detect collision between the player and enemies and end the game if they collide."
+}
+
+POST http://127.0.0.1:8500/generate
+
+GET http://127.0.0.1:8500/history?user_id=user123
+
+DELETE http://127.0.0.1:8500/history/task?user_id=user123&task_name=ecommerce_sql
+
+
+
+
+
+

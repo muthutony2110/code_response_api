@@ -1,0 +1,30 @@
+[
+  {
+    "prompt": "create a code for make small doctor chatbot",
+    "response": {
+      "message": "\u23f0 DeepSeek took too long to respond. Try again.",
+      "code": ""
+    }
+  },
+  {
+    "prompt": "create a code for make small doctor chatbot",
+    "response": {
+      "message": "Sure, I'd be happy to help you create a simple doctor chatbot in Python. Below is a basic example using the `random` library to simulate responses based on user input. This bot will ask the user some questions and provide general advice related to common health issues.",
+      "code": "import random\n\n# List of possible responses for different inputs\nresponses = {\n    \"hello\": \"Hello! How can I assist you today?\",\n    \"hi\": \"Hi there! What seems to be the problem?\",\n    \"how are you?\": \"I'm just a bot, but I'm here to help! How about you?\",\n    \"depressed\": \"It's important to talk about your feelings. Have you talked to someone about this?\",\n    \"tired\": \"Getting enough sleep is crucial for good health. What can we do to improve your sleep routine?\",\n    \"hungry\": \"Make sure to eat balanced meals and stay hydrated.\",\n    \"bye\": \"Goodbye! Take care!\",\n    \"default\": \"I'm not sure how to respond to that. Can you please elaborate or rephrase?\"\n}\n\ndef get_response(user_input):\n    user_input = user_input.lower()\n    if user_input in responses:\n        return responses[user_input]\n    else:\n        return responses[\"default\"]\n\ndef main():\n    print(\"Welcome to the Doctor Chatbot! Type 'bye' to exit.\")\n    while True:\n        user_input = input(\"You: \")\n        if user_input.lower() == \"bye\":\n            print(get_response(user_input))\n            break\n        else:\n            response = get_response(user_input)\n            print(\"Bot:\", response)\n\nif __name__ == \"__main__\":\n    main()"
+    }
+  },
+  {
+    "prompt": "create a appoinment for meet doctor",
+    "response": {
+      "message": "\u23f0 DeepSeek took too long to respond. Try again.",
+      "code": ""
+    }
+  },
+  {
+    "prompt": "create a appoinment for meet doctor",
+    "response": {
+      "message": "To create an appointment booking system for a doctor's office, we can use Python with Flask (a micro web framework) and integrate it with a database like SQLite or PostgreSQL. Below is a simplified example using Flask and SQLite. This example assumes you have basic knowledge of Python, Flask, and SQLAlchemy (which is commonly used with Flask for database interactions).\n\nFirst, make sure you have Flask installed:",
+      "code": "pip install flask"
+    }
+  }
+]
